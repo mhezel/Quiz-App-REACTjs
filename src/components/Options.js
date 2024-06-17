@@ -1,4 +1,8 @@
-function Options({ question, dispatch, answer }) {
+import { useReactQuiz } from "../context/ReactQuizContext";
+
+function Options({ question }) {
+  const { answer, dispatch } = useReactQuiz();
+
   const hasAnswered = answer !== null;
 
   return (
@@ -14,7 +18,7 @@ function Options({ question, dispatch, answer }) {
           }`}
           key={option}
           disabled={hasAnswered}
-          onClick={() => dispatch({ type: "newAnswer", payload: index })}
+          onClick={() => dispatch({ type: "data/newAnswer", payload: index })}
         >
           {option}
         </button>
