@@ -7,3 +7,4 @@
 * prop-drilling
 * derived state variables
 * UI layout & style copied
+* code refactoring (Context API, useReducer, and created custom hooks for advanced state management)
